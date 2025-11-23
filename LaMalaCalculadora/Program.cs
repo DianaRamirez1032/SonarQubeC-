@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Globalization;
 
 // EJERCICIO DE CALCULADORA C#
+// DIANA RAMIREZ - SAMUEL DIAZ
 namespace BuenaCalculadora
 {
     // Antes se usaba DoIt con lógica redundante y trucos inseguros.
     // Ahora cada operación está separada en un metodo claro y mantenible.
-    public class Operaciones
+    static class Operaciones
     {
-        public double Sumar(double a, double b) => a + b;
-        public double Restar(double a, double b) => a - b;
-        public double Multiplicar(double a, double b) => a * b;
+        public static double Sumar(double a, double b) => a + b;
+        public static double Restar(double a, double b) => a - b;
+        public static double Multiplicar(double a, double b) => a * b;
 
         // Antes se hacía un "hack" con B+0.0000001, ahora lanzamos excepción clara.
-        public double Dividir(double a, double b)
+        public static double Dividir(double a, double b)
         {
             const double epsilon = 1e-10; // margen de tolerancia
             if (Math.Abs(b) < epsilon)
@@ -24,18 +25,17 @@ namespace BuenaCalculadora
         }
 
         // Potencia usando Math.Pow en vez de bucles manuales.
-        public double Potenciar(double a, double b) => Math.Pow(a, b);
-        public double Modular(double a, double b) => a % b;
+        public static double Potenciar(double a, double b) => Math.Pow(a, b);
+        public static double Modular(double a, double b) => a % b;
 
         // Antes se usaba TrySqrt con Newton-Raphson y bucles innecesarios.
-        public double Raiz(double a) => Math.Sqrt(a);
+        public static double Raiz(double a) => Math.Sqrt(a);
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            var calcular = new Operaciones();
             var historial = new List<string>();
 
             while (true)
@@ -67,13 +67,13 @@ namespace BuenaCalculadora
                     // Switch en vez de ifs encadenados.
                     switch (option)
                     {
-                        case "1": result = calcular.Sumar(a, b); break;
-                        case "2": result = calcular.Restar(a, b); break;
-                        case "3": result = calcular.Multiplicar(a, b); break;
-                        case "4": result = calcular.Dividir(a, b); break;
-                        case "5": result = calcular.Potenciar(a, b); break;
-                        case "6": result = calcular.Modular(a, b); break;
-                        case "7": result = calcular.Raiz(a); break;
+                        case "1": result = Operaciones.Sumar(a, b); break;
+                        case "2": result = Operaciones.Restar(a, b); break;
+                        case "3": result = Operaciones.Multiplicar(a, b); break;
+                        case "4": result = Operaciones.Dividir(a, b); break;
+                        case "5": result = Operaciones.Potenciar(a, b); break;
+                        case "6": result = Operaciones.Modular(a, b); break;
+                        case "7": result = Operaciones.Raiz(a); break;
                         case "8":
                             foreach (var item in historial) Console.WriteLine(item);
                             continue;
