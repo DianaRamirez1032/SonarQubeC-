@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace CleanCalc
+// EJERCICIO DE CALCULADORA C#
+namespace BuenaCalculadora
 {
     // Antes se usaba DoIt con lógica redundante y trucos inseguros.
-    // Ahora cada operación está separada en un método claro y mantenible.
+    // Ahora cada operación está separada en un metodo claro y mantenible.
     public class Operaciones
     {
         public double Sumar(double a, double b) => a + b;
@@ -15,7 +16,10 @@ namespace CleanCalc
         // Antes se hacía un "hack" con B+0.0000001, ahora lanzamos excepción clara.
         public double Dividir(double a, double b)
         {
-            if (b == 0) throw new DivideByZeroException("No se puede dividir por cero");
+            const double epsilon = 1e-10; // margen de tolerancia
+            if (Math.Abs(b) < epsilon)
+                throw new DivideByZeroException("No se puede dividir por un valor cercano a cero");
+
             return a / b;
         }
 
@@ -29,7 +33,7 @@ namespace CleanCalc
 
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             var calcular = new Operaciones();
             var historial = new List<string>();
