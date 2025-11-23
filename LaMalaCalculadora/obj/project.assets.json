@@ -8,31 +8,26 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\leona\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\diani\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\Downloads\\BadCalc_VeryBad\\BadCalc_VeryBad.csproj",
+      "projectUniqueName": "C:\\Users\\diani\\source\\repos\\DianaRamirez1032\\SonarQubeC-\\LaMalaCalculadora\\BadCalc_VeryBad.csproj",
       "projectName": "BadCalc_VeryBad",
-      "projectPath": "C:\\Users\\leona\\Downloads\\BadCalc_VeryBad\\BadCalc_VeryBad.csproj",
-      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\Downloads\\BadCalc_VeryBad\\obj\\",
+      "projectPath": "C:\\Users\\diani\\source\\repos\\DianaRamirez1032\\SonarQubeC-\\LaMalaCalculadora\\BadCalc_VeryBad.csproj",
+      "packagesPath": "C:\\Users\\diani\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\diani\\source\\repos\\DianaRamirez1032\\SonarQubeC-\\LaMalaCalculadora\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\diani\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
